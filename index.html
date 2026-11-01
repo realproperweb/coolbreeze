@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cool Breeze Air Conditioning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f9ff;--surf:#fff;--ink:#12304f;--mute:#4f6a86;--pri:#2e78c2;--pri2:#7ab8ee;--tint:#e3f0fd;--line:#cfe2f5;--wa:#128c4a;--sh:0 10px 30px rgba(46,120,194,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a2b;--surf:#122740;--ink:#e6f1fc;--mute:#9db6d0;--pri:#6fb2ee;--pri2:#3b82c4;--tint:#17314f;--line:#244567;--sh:0 10px 30px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0b1a2b;--surf:#122740;--ink:#e6f1fc;--mute:#9db6d0;--pri:#6fb2ee;--pri2:#3b82c4;--tint:#17314f;--line:#244567;--sh:0 10px 30px rgba(0,0,0,.35)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surf);z-index:60}
+h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:700}h2{font-size:clamp(1.7rem,4vw,2.4rem)}h3{font-size:1.2rem}
+a{color:var(--pri)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.top{background:var(--ink);color:#d8e9fb;font-size:.85rem}
+.top .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;padding-top:8px;padding-bottom:8px}
+.top a{color:#fff;text-decoration:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surf);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand .lg{width:48px;height:48px;border-radius:50%;background:var(--tint);display:grid;place-items:center;font-size:1.6rem;overflow:hidden;border:2px solid var(--pri2);flex:none}
+.brand .lg img{width:100%;height:100%;object-fit:contain}
+.brand b{font:700 1.3rem 'Source Serif 4',serif;color:var(--pri)}.brand b span{color:var(--pri2)}
+.brand small{display:block;font-size:.7rem;letter-spacing:.14em;color:var(--mute);margin-top:-4px}
+nav{display:flex;gap:20px}nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem}nav a:hover{color:var(--pri)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;border:2px solid var(--pri);background:var(--pri);color:#fff;font:700 .95rem 'DM Sans',sans-serif;text-decoration:none;cursor:pointer}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--pri2);outline-offset:2px}
+.btn.o{background:transparent;color:var(--pri)}.btn.wa{background:var(--wa);border-color:var(--wa)}
+.burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--ink);cursor:pointer}
+.hero{padding:56px 0 72px;background:radial-gradient(circle at 85% 10%,var(--tint),transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--mute);max-width:52ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+.chat{background:var(--surf);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh);overflow:hidden}
+.chat .hd{background:var(--wa);color:#fff;padding:14px 18px;display:flex;gap:10px;align-items:center;font-weight:700}
+.chat .bd{padding:18px;display:grid;gap:10px;background:var(--tint)}
+.chat .msg{background:var(--surf);padding:10px 14px;border-radius:4px 16px 16px 16px;max-width:90%}
+.chat button{text-align:left;background:var(--surf);border:1.5px solid var(--wa);color:var(--ink);padding:10px 14px;border-radius:14px;font:500 .95rem 'DM Sans',sans-serif;cursor:pointer}
+.chat button:hover{background:var(--wa);color:#fff}
+.strip{background:var(--pri);color:#fff;padding:22px 0}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.strip b{display:block;font-size:1.5rem}.strip span{font-size:.9rem;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--sh);text-align:left;font:inherit;color:inherit;cursor:pointer;display:block;width:100%}
+.card:hover{border-color:var(--pri)}.card .ic{font-size:2rem}.card p{color:var(--mute);margin:.2em 0 .8em;font-size:.95rem}.card em{color:var(--pri);font-style:normal;font-weight:700;font-size:.9rem}
+.sub{color:var(--mute);max-width:60ch;margin-bottom:28px}
+.alt{background:var(--surf);border-block:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:20px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--pri);color:#fff;font-weight:700;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surf);color:var(--ink);font:500 .95rem 'DM Sans',sans-serif;cursor:pointer}.chip:hover{border-color:var(--pri);color:var(--pri)}
+details{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}details p{margin:.6em 0 0;color:var(--mute)}
+.ctab{background:linear-gradient(135deg,var(--pri),#1c5a99);color:#fff;border-radius:24px;padding:40px;display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.ctab h2{margin:0}.ctab .btn{background:#fff;color:#1c5a99;border-color:#fff}.ctab .btn.wa{background:var(--wa);color:#fff;border-color:var(--wa)}
+footer{background:#0d2238;color:#bcd3ea;padding:56px 0 0;font-size:.95rem}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px}
+footer h3{color:#fff;font-size:1.05rem}footer a,footer button.l{color:#bcd3ea;text-decoration:none;display:block;margin:6px 0;background:none;border:0;padding:0;font:inherit;cursor:pointer;text-align:left}footer a:hover,footer button.l:hover{color:#fff}
+footer .bar{margin-top:40px;border-top:1px solid #23415f;padding:18px 0;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;font-size:.85rem}
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;font-size:1.8rem;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+dialog{border:0;border-radius:20px;padding:0;max-width:560px;width:calc(100% - 28px);background:var(--surf);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.4);max-height:88vh}
+dialog::backdrop{background:rgba(8,24,44,.6)}
+dialog[open]{animation:pop .2s ease-out}@keyframes pop{from{transform:translateY(14px);opacity:0}}
+.mh{display:flex;gap:12px;align-items:center;padding:20px 24px;background:var(--tint);border-bottom:1px solid var(--line)}
+.mh .ic{font-size:2rem}.mh h3{margin:0;flex:1}
+.x{background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+.mb{padding:22px 24px;overflow:auto;max-height:calc(88vh - 90px)}
+.mb ul{padding-left:1.2em}.mb li{margin:.3em 0}.mb .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:12px 0;background:var(--bg);padding:14px;border-radius:12px}.kv b{color:var(--pri)}
+label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+@media(max-width:860px){nav{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--surf);padding:16px 20px;border-bottom:1px solid var(--line)}nav.on{display:flex}.burger{display:block}header .btn.d{display:none}.hero .wrap,.split,footer .cols{grid-template-columns:1fr}.steps,.strip .wrap{grid-template-columns:1fr 1fr}.top .wrap>:nth-child(n+3){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>🕗 Mon–Fri 08:00–17:00</span><span>🚨 Emergency callouts via WhatsApp</span><a href="tel:+27689124033">📞 068 912 4033</a><a href="mailto:info@coolbreeze.co.za">✉️ info@coolbreeze.co.za</a></div></div>
+<header><div class="wrap">
+<a class="brand" href="#top"><span class="lg" data-logo>❄️</span><span><b>Cool <span>Breeze</span></b><small>AIR CONDITIONING</small></span></a>
+<nav id="nav"><a href="#services">Services</a><a href="#process">How it works</a><a href="#areas">Areas</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<a class="btn d" href="tel:+27689124033">📞 068 912 4033</a>
+<button class="btn wa" onclick="quote()">💬 Get a quote</button>
+<button class="burger" aria-label="Menu" onclick="nav.classList.toggle('on')">☰</button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<h1>Cooler rooms. Calmer days. Done right the first time.</h1>
+<p class="lead">Cool Breeze installs, repairs and services air conditioning for homes, offices and businesses. Free quotes, no contracts, and workmanship we stand behind.</p>
+<div class="cta"><button class="btn wa" onclick="quote()">💬 Get a free quote</button><button class="btn o" onclick="openSvc(0)">🔎 See what we do</button></div>
+<div class="chips"><span class="chip">✅ Free quotes</span><span class="chip">🛡️ Insured</span><span class="chip">🔧 Guaranteed workmanship</span></div>
+</div>
+<div class="chat"><div class="hd">💬 Chat to Cool Breeze</div><div class="bd">
+<div class="msg">Hi 👋 What can we help with? Tap an option and we’ll open WhatsApp with your message ready.</div>
+<button onclick="wa('Hi Cool Breeze, I’d like a free quote for a new air conditioner installation.')">❄️ I want a new aircon quote</button>
+<button onclick="wa('Hi Cool Breeze, my aircon has stopped working / is not cooling. Can someone help urgently?')">🚨 My aircon isn’t working</button>
+<button onclick="wa('Hi Cool Breeze, I’d like to book a service for my air conditioner.')">🔧 Book a service</button>
+<button onclick="wa('Hi Cool Breeze, I have a question about air conditioning.')">❓ Ask a question</button>
+</div></div>
+</div></section>
+
+<div class="strip"><div class="wrap"><div><b>🆓</b><span>Obligation-free quotes</span></div><div><b>📄</b><span>No contracts</span></div><div><b>🛡️</b><span>Fully insured</span></div><div><b>🔧</b><span>Workmanship guarantee</span></div></div></div>
+
+<section id="services"><div class="wrap">
+<h2>Cooling, heating and refrigeration services</h2>
+<p class="sub">Tap any service for what’s included, what to have ready, and a one-tap WhatsApp message.</p>
+<div class="grid" id="sgrid"></div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+<button class="card" onclick="openType('res')"><div class="ic">🏡</div><h3>Residential cooling</h3><p>Apartments, single and double-storey homes. Neat installations that suit your space and budget.</p><em>View details ›</em></button>
+<button class="card" onclick="openType('com')"><div class="ic">🏢</div><h3>Commercial cooling</h3><p>Offices, shops, warehouses and industrial sites. Energy-efficient design, install and maintenance.</p><em>View details ›</em></button>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>What to expect on your first appointment</h2>
+<p class="sub">Simple, transparent and no-pressure.</p>
+<ol class="steps">
+<li><h3>Message us</h3>Tell us about the room or site on WhatsApp or by phone.</li>
+<li><h3>We visit</h3>We measure the space and check power, access and placement.</li>
+<li><h3>You get a quote</h3>A clear, obligation-free quote with our professional recommendation.</li>
+<li><h3>We install</h3>A tidy installation, a demo, and your guarantee.</li>
+</ol>
+<div class="row" style="margin-top:20px"><button class="btn" onclick="sizeGuide()">📏 Which size aircon do I need?</button></div>
+</div></section>
+
+<section class="alt" id="areas"><div class="wrap">
+<h2>Areas we cover</h2>
+<p class="sub">Tap your area to check availability on WhatsApp.</p>
+<div class="chips" id="achips"></div>
+</div></section>
+
+<section id="faq"><div class="wrap split">
+<div><h2>Frequently asked questions</h2><p class="sub">Can’t find your answer? Ask us on WhatsApp.</p><button class="btn wa" onclick="wa('Hi Cool Breeze, I have a question about air conditioning.')">💬 Ask a question</button></div>
+<div id="faqs"></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="ctab"><div><h2>Ready for a cooler home or office?</h2><p style="margin:0">Free quote today. Tell us what you need.</p></div><div class="cta" style="margin:0"><button class="btn wa" onclick="quote()">💬 Get a free quote</button><a class="btn" href="tel:+27689124033">📞 068 912 4033</a></div></div></div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<div class="cols">
+<div><div class="brand" style="color:#fff"><span class="lg" data-logo>❄️</span><span><b style="color:#fff">Cool <span>Breeze</span></b><small style="color:#9fbbd8">AIR CONDITIONING</small></span></div>
+<p style="margin-top:14px">Installation, repairs and servicing of air conditioning for homes and businesses. Cool, clean and dependable.</p>
+<div class="chips"><a class="chip" style="margin:0" href="#" onclick="soc('Facebook');return false">📘</a><a class="chip" style="margin:0" href="#" onclick="soc('Instagram');return false">📸</a><a class="chip" style="margin:0" href="#" onclick="wa('Hi Cool Breeze!');return false">💬</a></div></div>
+<div><h3>Quick links</h3><a href="#services">Services</a><a href="#process">How it works</a><a href="#areas">Areas we cover</a><a href="#faq">FAQ</a><button class="l" onclick="quote()">Request a quote</button></div>
+<div><h3>Services</h3><div id="fsv"></div></div>
+<div><h3>Contact</h3><a href="tel:+27689124033">📞 068 912 4033</a><button class="l" onclick="wa('Hi Cool Breeze!')">💬 WhatsApp us</button><a href="mailto:info@coolbreeze.co.za">✉️ info@coolbreeze.co.za</a><button class="l" onclick="hours()">🕗 Mon–Fri 08:00–17:00</button><button class="l" onclick="wa('URGENT: I need emergency aircon/refrigeration help.')">🚨 Emergency callout</button></div>
+</div>
+<div class="bar"><span>© 2026 Cool Breeze Air Conditioning (Pty) Ltd. All rights reserved. Reg. no: [add]</span><span><button class="l" style="display:inline;margin:0 12px 0 0" onclick="legal('Privacy policy')">Privacy policy</button><button class="l" style="display:inline;margin:0" onclick="legal('Terms of service')">Terms of service</button></span></div>
+</div></footer>
+
+<a class="fab" id="fab" href="#" aria-label="WhatsApp us">💬</a>
+<dialog id="dlg"><div class="mh"><span class="ic" id="mi"></span><h3 id="mt"></h3><button class="x" aria-label="Close" onclick="dlg.close()">✕</button></div><div class="mb" id="mbody"></div></dialog>
+
+<script>
+const LOGO=""; // paste your logo as a data: URI or hosted URL here, e.g. "data:image/png;base64,..."
+const NUM="27689124033";
+const $=id=>document.getElementById(id);
+const WA=t=>"https://wa.me/"+NUM+"?text="+encodeURIComponent(t);
+const wa=t=>window.open(WA(t),"_blank","noopener");
+const S=[
+{i:"🏠",t:"Split-unit installation",s:"Wall-mounted units for bedrooms, lounges and offices.",d:"Neat, professional installation of mid-wall split units, sized to your room and budget.",inc:["On-site measure and sizing advice","Mounting, piping, wiring and drainage","Pressure test, commissioning and demo","Site cleaned up when we finish"],ideal:"Single rooms, apartments, home offices",time:"Usually half a day to a day",ready:"Room size, preferred spot, and a photo of the wall"},
+{i:"🏘️",t:"Ducted systems",s:"One system to cool several rooms quietly.",d:"Whole-home or whole-floor cooling with hidden ducting and wall controllers.",inc:["Design and load calculation","Ceiling-space inspection","Zoned airflow options","Installation and commissioning"],ideal:"Larger homes, double-storey, new builds",time:"Typically 2–4 days depending on size",ready:"House plan or photos, ceiling type, number of rooms"},
+{i:"📦",t:"Cassette & floor-standing",s:"Ceiling cassettes and floor-standing units.",d:"Even airflow for open-plan and commercial spaces without wall units.",inc:["Site inspection and placement advice","Cassette or floor-standing supply and install","Condensate drainage","Commissioning and handover"],ideal:"Offices, shops, restaurants, large lounges",time:"Typically 1–2 days",ready:"Floor area, ceiling height, photos of the space"},
+{i:"🚨",t:"Repairs & breakdowns",s:"Not cooling, leaking, noisy or won’t start.",d:"Fast fault-finding and repair on most common makes and models.",inc:["Fault diagnosis","Repairs and part replacement","Leak and drain checks","Clear price before we start work"],ideal:"Any unit that has stopped working properly",time:"Same-day response where possible",ready:"Brand, model, any error code, and what’s happening"},
+{i:"🧼",t:"Servicing & maintenance",s:"Keep it efficient, clean and healthy.",d:"Regular maintenance cuts power use, prevents breakdowns and improves air quality.",inc:["Filter and coil cleaning","Drain and fan check","Electrical and gas-pressure check","Performance report"],ideal:"Yearly service for homes, more often for businesses",time:"About 45–60 minutes per unit",ready:"Number of units and when they were last serviced"},
+{i:"🧪",t:"Gas re-gas & leak checks",s:"Restore cooling and find the cause.",d:"If your unit blows warm air, it may be low on gas. We find the leak first, then re-gas.",inc:["Leak detection","Repair of accessible leaks","Re-gas to correct pressure","Cooling performance test"],ideal:"Units that cool weakly or ice up",time:"Usually 1–2 hours",ready:"Brand, model, and how long the problem has been there"},
+{i:"🏢",t:"Commercial cooling",s:"Offices, warehouses and industrial sites.",d:"Complete design, supply, install and maintenance for commercial cooling and ventilation.",inc:["Site survey and energy-efficient design","Multi-unit and VRF options","Maintenance plans without contracts","After-hours work on request"],ideal:"Offices, retail, warehouses, factories",time:"Scoped per project",ready:"Floor area, number of rooms, working hours"},
+{i:"🧊",t:"Refrigeration",s:"Cold rooms, freezers and display fridges.",d:"Installation and repair of commercial refrigeration so your stock stays safe.",inc:["Cold-room and freezer servicing","Fault repair and temperature checks","Gas and compressor work","Emergency callouts"],ideal:"Restaurants, butcheries, shops, guesthouses",time:"Emergency response prioritised",ready:"Equipment type, brand and the fault you’re seeing"}];
+const AREAS=["Johannesburg","Sandton","Randburg","Roodepoort","Midrand","Centurion","Pretoria","Soweto","Edenvale","Germiston"];
+const FAQ=[["What should I expect on my first appointment?","We visit, measure the space, check power and placement, and give our professional recommendation, keeping your wants and budget in mind."],["What’s included in your service?","A free, obligation-free quotation, professional installation, and aftercare."],["What warranties do you offer?","We guarantee our workmanship and pass on the manufacturer’s warranty on units we supply."],["Are you insured?","Yes. We are insured against damage to your property while we work."],["Do I need a contract?","No. Services are offered without contract and can be changed at any time."],["How often should I service my aircon?","Once a year for most homes. Businesses and dusty or coastal sites benefit from every six months."]];
+const TY={res:{i:"🏡",t:"Residential cooling",d:"We create comfortable homes that look good and fit your budget, with close attention to detail.",l:[["Apartment cooling","Compact split units, quiet and tidy."],["Single-storey","Splits or ducted for whole-house comfort."],["Double-storey","Zoned systems for upstairs and downstairs."]]},com:{i:"🏢",t:"Commercial cooling",d:"Energy-efficient systems designed, installed and maintained to lower your running costs.",l:[["Building cooling","Central and multi-split systems."],["Office cooling","Quiet cassettes and ducted units."],["Warehouse cooling","Large-volume and ventilation solutions."],["Industrial cooling","Heavy-duty cooling and refrigeration."]]}};
+const dlg=$("dlg"),nav=$("nav");
+function modal(i,t,h){$("mi").textContent=i;$("mt").textContent=t;$("mbody").innerHTML=h;dlg.showModal()}
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+const btns=(m,l="💬 Message us on WhatsApp")=>`<div class="row"><button class="btn wa" onclick='wa(${JSON.stringify(m)})'>${l}</button><a class="btn o" href="tel:+27689124033">📞 Call 068 912 4033</a></div>`;
+function openSvc(n){const s=S[n];modal(s.i,s.t,`<p>${s.d}</p><h3>What’s included</h3><ul>${s.inc.map(x=>`<li>${x}</li>`).join("")}</ul><div class="kv"><b>Ideal for</b><span>${s.ideal}</span><b>Typical time</b><span>${s.time}</span><b>Have ready</b><span>${s.ready}</span></div>`+btns(`Hi Cool Breeze, I’m interested in: ${s.t}. Can you help me with a quote?`))}
+function openType(k){const o=TY[k];modal(o.i,o.t,`<p>${o.d}</p><div class="kv">${o.l.map(x=>`<b>${x[0]}</b><span>${x[1]}</span>`).join("")}</div>`+btns(`Hi Cool Breeze, I’d like a quote for ${o.t.toLowerCase()}.`))}
+function area(a){modal("📍",a,`<p>We service <b>${a}</b> and surrounding suburbs. Message us your address and we’ll confirm availability and the next free slot.</p><div class="kv"><b>Quotes</b><span>Free and obligation-free</span><b>Callouts</b><span>Mon–Fri, emergencies by arrangement</span></div>`+btns(`Hi Cool Breeze, do you service ${a}? I’d like a quote.`))}
+function hours(){modal("🕗","Opening hours",`<div class="kv"><b>Mon–Fri</b><span>08:00–17:00</span><b>Sat–Sun</b><span>Closed, emergencies by arrangement</span><b>WhatsApp</b><span>Message anytime, we reply as soon as we can</span></div>`+btns("URGENT: I need emergency aircon/refrigeration help.","🚨 Emergency on WhatsApp"))}
+function soc(n){modal("🌐",n,`<p>Our ${n} page is coming soon. For now, the quickest way to reach us is WhatsApp on 068 912 4033.</p>`+btns("Hi Cool Breeze!"))}
+function sizeGuide(){modal("📏","Which size aircon do I need?",`<p>A rough guide for an average room with normal ceilings. We’ll confirm with a site visit.</p><div class="kv"><b>Up to 15 m²</b><span>9 000 BTU (2.6 kW)</span><b>15–25 m²</b><span>12 000 BTU (3.5 kW)</span><b>25–35 m²</b><span>18 000 BTU (5.3 kW)</span><b>35–50 m²</b><span>24 000 BTU (7 kW)</span><b>50 m² +</b><span>Ducted or commercial system</span></div><p style="color:var(--mute);font-size:.9rem">West-facing rooms, large windows and lots of equipment may need a bigger unit.</p>`+btns("Hi Cool Breeze, I need help choosing the right aircon size for my room.","💬 Ask us to size it"))}
+function legal(t){const p=t.startsWith("Priv");modal("📄",t,p?`<p>We collect your name, phone number and job details only to quote, schedule and complete your work. We don’t sell your information. Messages sent through WhatsApp are handled by WhatsApp under its own terms. To see or delete your details, message us on WhatsApp.</p>`:`<p>Quotes are free and valid for 30 days. Prices may change if the site differs from what we measured. Workmanship is guaranteed; manufacturer warranties apply to supplied units. Cancellations within 24 hours of an appointment may carry a callout fee. Full terms are available on request.</p>`+btns("Hi Cool Breeze, I’d like a copy of your full terms.","💬 Request full terms"))}
+function quote(pre=0){modal("📝","Get a free quote",`<p>Fill this in and we’ll open WhatsApp with your details ready to send.</p><label for="qn">Your name</label><input id="qn" autocomplete="name"><label for="qs">Service</label><select id="qs">${S.map((s,i)=>`<option ${i==pre?"selected":""}>${s.t}</option>`).join("")}</select><label for="qp">Property</label><select id="qp"><option>Home</option><option>Apartment</option><option>Office</option><option>Shop / restaurant</option><option>Warehouse / industrial</option></select><label for="qa">Suburb / area</label><input id="qa" list="al"><datalist id="al">${AREAS.map(a=>`<option>${a}`).join("")}</datalist><label for="qd">Details (optional)</label><textarea id="qd" rows="2"></textarea><div class="row"><button class="btn wa" onclick="sendQ()">💬 Send on WhatsApp</button></div>`)}
+function sendQ(){const v=i=>$(i).value.trim();wa(`Hi Cool Breeze, I’d like a free quote.\nName: ${v("qn")||"-"}\nService: ${v("qs")}\nProperty: ${v("qp")}\nArea: ${v("qa")||"-"}\nDetails: ${v("qd")||"-"}`);dlg.close()}
+$("sgrid").innerHTML=S.map((s,i)=>`<button class="card" onclick="openSvc(${i})"><div class="ic">${s.i}</div><h3>${s.t}</h3><p>${s.s}</p><em>Details &amp; quote ›</em></button>`).join("");
+$("fsv").innerHTML=S.slice(0,5).map((s,i)=>`<button class="l" onclick="openSvc(${i})">${s.t}</button>`).join("");
+$("achips").innerHTML=AREAS.map(a=>`<button class="chip" onclick="area('${a}')">📍 ${a}</button>`).join("")+`<button class="chip" onclick="area('your area')">➕ Other area</button>`;
+$("faqs").innerHTML=FAQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("");
+$("fab").href=WA("Hi Cool Breeze, I’d like some help with air conditioning.");$("fab").target="_blank";
+if(LOGO)document.querySelectorAll("[data-logo]").forEach(e=>e.innerHTML=`<img src="${LOGO}" alt="Cool Breeze logo">`);
+nav.addEventListener("click",e=>{if(e.target.tagName=="A")nav.classList.remove("on")});
+</script>
+</body>
+</html>
